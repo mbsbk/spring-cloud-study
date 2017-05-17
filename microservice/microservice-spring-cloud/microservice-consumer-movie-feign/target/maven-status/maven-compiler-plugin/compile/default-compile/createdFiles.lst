@@ -1,0 +1,5 @@
+microservice\Application.class
+microservice\consumer\movie\feign\UserFeignClient.class
+microservice\consumer\movie\feign\FeignController.class
+microservice\consumer\movie\feign\HystrixClientFallBack.class
+microservice\consumer\movie\feign\User.class

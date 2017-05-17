@@ -1,0 +1,4 @@
+microservice\consumer\movie\ribbon\RibbonService.class
+microservice\Application.class
+microservice\consumer\movie\ribbon\User.class
+microservice\consumer\movie\ribbon\RibbonController.class

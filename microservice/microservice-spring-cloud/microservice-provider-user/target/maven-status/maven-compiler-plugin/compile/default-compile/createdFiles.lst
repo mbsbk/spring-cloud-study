@@ -1,0 +1,8 @@
+microservice\Application.class
+microservice\provider\user\controller\UserController.class
+microservice\provider\user\entity\UserExample$Criteria.class
+microservice\provider\user\entity\UserExample$GeneratedCriteria.class
+microservice\provider\user\entity\User.class
+microservice\provider\user\entity\UserExample.class
+microservice\provider\user\entity\UserExample$Criterion.class
+microservice\provider\user\mapper\UserMapper.class
