@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: microservice-api-gateway
+server:
+  port: 8050
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+zuul:
+  routes:
+    user: #随意指定，zuul中唯一即可
+      path: /user/**
+      service-id: microservice-provider-user
+
+
+
+
+
