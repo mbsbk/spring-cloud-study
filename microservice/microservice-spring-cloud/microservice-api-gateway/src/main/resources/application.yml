@@ -14,7 +14,9 @@ zuul:
     user: #随意指定，zuul中唯一即可
       path: /user/**
       service-id: microservice-provider-user
-
+    consumer:
+      path: /consumer/**
+      service-id: microservice-consumer-movie-feign
 
 
 
