@@ -30,9 +30,9 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.13</version>
                 <configuration>
-                    <imageName>test-${project.build.finalName}</imageName>
+                    <imageName>microservice/${project.artifactId}:${project.version}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/resources/docker</dockerDirectory>
-                    <dockerHost>https://192.168.99.102:2376</dockerHost>
+                    <dockerHost>https://192.168.99.100:2376</dockerHost>
                     <dockerCertPath>C:\Users\mb\.docker\machine\machines\default</dockerCertPath>
                     <resources>
                         <resource>

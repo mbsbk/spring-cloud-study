@@ -1,0 +1,35 @@
+version: "2"
+services:
+  peer1:
+    image: microservice/microservice-discovery-eureka:1.0-snapshot
+    ports:
+      - "8761:8761"
+    environment:
+      - spring.profiles.active=peer1
+  peer2:
+    image: microservice/microservice-discovery-eureka:1.0-snapshot
+    ports:
+      - "8762:8762"
+    environment:
+      - spring.profiles.active=peer2
+  microservice-config-server-eureka:
+    image: microservice/microservice-config-server-eureka:1.0-snapshot
+    ports:
+      - "8050:8050"
+  microservice-api-gateway:
+    image: microservice/microservice-api-gateway:1.0-snapshot
+    ports:
+      - "9000:9000"
+  microservice-provider-user:
+    image: microservice/microservice-provider-user:1.0-snapshot
+    links:
+      - db
+  microservice-consumer-movie-feign:
+    image: microservice/microservice-consumer-movie-feign:1.0-snapshot
+    links:
+      - microservice-provider-user
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=microservice
