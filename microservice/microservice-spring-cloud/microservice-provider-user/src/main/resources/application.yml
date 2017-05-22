@@ -1,3 +1,38 @@
 server:
   port: 0 #random port
 
+spring:
+  application:
+    name: microservice-provider-user
+  datasource:
+    url: jdbc:mysql://db:3306/microservice
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+
+
+
+mybatis:
+  mapperLocations: classpath*:mapper/*.xml
+  config-location: classpath:mybatis-config.xml

@@ -16,6 +16,12 @@ services:
     image: microservice/microservice-config-server-eureka:1.0-snapshot
     ports:
       - "8050:8050"
+  microservice-config-client-eureka:
+    image: microservice/microservice-config-client-eureka:1.0-snapshot
+    ports:
+      - "8051:8051"
+    depends_on:
+      - microservice-config-server-eureka
   microservice-api-gateway:
     image: microservice/microservice-api-gateway:1.0-snapshot
     ports:

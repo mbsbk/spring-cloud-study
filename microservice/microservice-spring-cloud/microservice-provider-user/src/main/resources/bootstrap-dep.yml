@@ -1,16 +1,16 @@
-spring:
-  application:
-    name: microservice-provider-user
-  cloud:
-    config:
-      profile: dev
-      label: master
-      discovery:
-        enabled: true
-        service-id: microservice-config-server-eureka
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
-
-
+#spring:
+#  application:
+#    name: microservice-provider-user
+#  cloud:
+#    config:
+#      profile: dev
+#      label: master
+#      discovery:
+#        enabled: true
+#        service-id: microservice-config-server-eureka
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+#
+#
