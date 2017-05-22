@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/mbsbk/spring-cloud-study.git
           search-paths:  config-repo
           username: mb9177@163.com
-          password: LDbgirl17
+          password: 1qaz@WSX
 eureka:
   client:
     service-url:
