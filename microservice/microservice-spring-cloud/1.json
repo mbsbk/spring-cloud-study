@@ -1,0 +1,25 @@
+{
+  "info": {
+    "id":"",
+    "name": "",
+    "logo": "",
+    "files": [
+      "",
+      ""
+    ]
+  },
+  "version": {
+    "add": [
+      {
+        "versionNo": "1.1"
+      },
+      {
+        "versionNo": "1.0"
+      }
+    ],
+    "delete": [
+      "id1",
+      "id2"
+    ]
+  }
+}
